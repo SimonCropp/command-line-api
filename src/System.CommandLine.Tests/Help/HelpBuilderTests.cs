@@ -564,7 +564,7 @@ namespace System.CommandLine.Tests.Help
             {
                 new Argument<string>("outer-command-arg")
                 {
-                    Description = $"The argument\r\nfor the\ninner command"
+                    Description = "The argument\r\nfor the\ninner command"
                 }
             };
 
@@ -586,7 +586,7 @@ namespace System.CommandLine.Tests.Help
             {
                 new Argument<string>("outer-command-arg")
                 {
-                    Description = $"The argument\r\nfor the\ninner command",
+                    Description = "The argument\r\nfor the\ninner command",
                 }
             };
 
@@ -1331,7 +1331,7 @@ namespace System.CommandLine.Tests.Help
 
             var help = _console.ToString();
 
-            help.Should().Contain($"[default: the-arg-value]");
+            help.Should().Contain("[default: the-arg-value]");
         }
 
         [Fact]
@@ -1556,7 +1556,7 @@ namespace System.CommandLine.Tests.Help
             var command = new Command("outer", "outer command help")
                 {
                     new Argument<string>("outer-args"),
-                    new Command("inner", $"inner command help")
+                    new Command("inner", "inner command help")
                     {
                         argument,
                         otherArgumentHidden,

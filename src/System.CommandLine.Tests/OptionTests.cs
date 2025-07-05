@@ -405,7 +405,7 @@ namespace System.CommandLine.Tests
             result.Errors
                   .Select(e => e.Message)
                   .Should()
-                  .BeEquivalentTo(new[] { $"Argument 'Fuschia' not recognized. Must be one of:\n\t'Red'\n\t'Green'" });
+                  .BeEquivalentTo(new[] {"Argument 'Fuschia' not recognized. Must be one of:\n\t'Red'\n\t'Green'"});
         }
 
         [Fact]

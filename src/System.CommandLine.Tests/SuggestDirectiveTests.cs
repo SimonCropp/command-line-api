@@ -70,7 +70,7 @@ namespace System.CommandLine.Tests
                 Output = new StringWriter()
             };
 
-            var result = rootCommand.Parse($"[suggest:8] \"--fruit\"", config);
+            var result = rootCommand.Parse("[suggest:8] \"--fruit\"", config);
 
             await result.InvokeAsync();
 
